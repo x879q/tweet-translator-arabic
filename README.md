@@ -28,6 +28,16 @@
 | `styles.css` | تنسيق الأيقونة |
 | `icons/` | أيقونات الإضافة |
 
+## المتصفحات المدعومة
+
+- Google Chrome
+- Microsoft Edge
+- Brave
+- Opera / Opera GX
+- Vivaldi
+- Arc
+- أي متصفح مبني على Chromium
+
 ## ملاحظات
 
 - الترجمة تتم عبر Google Translate بدون الحاجة لمفتاح API
