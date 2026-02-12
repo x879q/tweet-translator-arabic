@@ -1,0 +1,46 @@
+.tweet-translate-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin-left: 4px;
+  border: none;
+  border-radius: 9999px;
+  background-color: transparent;
+  color: rgb(113, 118, 123);
+  cursor: pointer;
+  transition: color 0.2s, background-color 0.2s;
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  position: relative;
+}
+
+.tweet-translate-btn:hover {
+  color: #1d9bf0;
+}
+
+.tweet-translate-btn.translating {
+  opacity: 0.5;
+  cursor: wait;
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+
+.tweet-translate-btn.done {
+  color: #00ba7c;
+}
+
+.tweet-translate-btn.done:hover {
+  color: #1d9bf0;
+}
+
+.tweet-translate-btn svg {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+}
