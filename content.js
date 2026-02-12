@@ -56,18 +56,14 @@ function getTweetTextElement(tweetArticle) {
   return tweetArticle.querySelector('[data-testid="tweetText"]');
 }
 
-function getUserNameRow(tweetArticle) {
-  return tweetArticle.querySelector('[data-testid="User-Name"]');
-}
-
 function addTranslateButton(tweetArticle) {
   if (tweetArticle.querySelector('[data-translate-btn]')) return;
 
   const tweetTextEl = getTweetTextElement(tweetArticle);
   if (!tweetTextEl) return;
 
-  const userNameRow = getUserNameRow(tweetArticle);
-  if (!userNameRow) return;
+  const caretBtn = tweetArticle.querySelector('[data-testid="caret"]');
+  if (!caretBtn) return;
 
   const btn = createTranslateButton();
   let isTranslated = false;
@@ -114,7 +110,9 @@ function addTranslateButton(tweetArticle) {
     }
   });
 
-  userNameRow.appendChild(btn);
+  // Place next to the ⋯ (more) button
+  const caretContainer = caretBtn.closest('[role="button"]') || caretBtn.parentElement;
+  caretContainer.parentElement.insertBefore(btn, caretContainer);
 }
 
 function scanTweets() {
