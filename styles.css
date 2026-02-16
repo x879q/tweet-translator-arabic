@@ -2,22 +2,28 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0;
-  margin-left: 4px;
+  padding: 6px;
+  margin-left: 8px;
+  margin-right: 8px;
   border: none;
   border-radius: 9999px;
   background-color: transparent;
   color: rgb(113, 118, 123);
   cursor: pointer;
-  transition: color 0.2s, background-color 0.2s;
-  width: 20px;
-  height: 20px;
+  transition: all 0.2s ease;
+  width: 34px;
+  height: 34px;
   vertical-align: middle;
   position: relative;
 }
 
 .tweet-translate-btn:hover {
   color: #1d9bf0;
+  background-color: rgba(29, 155, 240, 0.1);
+}
+
+.tweet-translate-btn:active {
+  transform: scale(0.85);
 }
 
 .tweet-translate-btn.translating {
@@ -36,11 +42,33 @@
 }
 
 .tweet-translate-btn.done:hover {
-  color: #1d9bf0;
+  color: #00ba7c;
+  background-color: rgba(0, 186, 124, 0.1);
 }
 
 .tweet-translate-btn svg {
-  width: 16px;
-  height: 16px;
+  width: 20px;
+  height: 20px;
   fill: currentColor;
+}
+
+/* Light Mode */
+@media (prefers-color-scheme: light) {
+  .tweet-translate-btn {
+    color: rgb(83, 100, 113);
+  }
+
+  .tweet-translate-btn:hover {
+    color: #1d9bf0;
+    background-color: rgba(29, 155, 240, 0.1);
+  }
+
+  .tweet-translate-btn.done {
+    color: #00ba7c;
+  }
+
+  .tweet-translate-btn.done:hover {
+    color: #00ba7c;
+    background-color: rgba(0, 186, 124, 0.1);
+  }
 }
